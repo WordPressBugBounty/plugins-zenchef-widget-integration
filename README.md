@@ -1,0 +1,1 @@
+# plugins-zenchef-widget-integration
