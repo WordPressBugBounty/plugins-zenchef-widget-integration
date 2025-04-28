@@ -1,0 +1,8 @@
+<div class="wrap">
+    <h2><?php echo _x('Zenchef widget settings', 'widget.backoffice.settings_page.title', 'zenchef-widget-integration') ?></h2>
+    <form action="options.php" method="POST">
+        <?php settings_fields($settings_group_slug); ?>
+        <?php do_settings_sections($page_slug) ?>
+        <?php submit_button() ?>
+    </form>
+</div>

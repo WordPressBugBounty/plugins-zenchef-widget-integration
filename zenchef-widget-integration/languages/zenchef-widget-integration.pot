@@ -1,0 +1,95 @@
+# Copyright (C) 2024 Zenchef
+# This file is distributed under the GPL2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Zenchef widget integration 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zenchef-widget-integration\n"
+"Last-Translator: Zenchef <tech@zenchef.com>\n"
+"Language-Team: Zenchef <tech@zenchef.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-20T16:05:24+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: zenchef-widget-integration\n"
+
+#. Plugin Name of the plugin
+#: zenchef-widget-integration.php
+msgid "Zenchef widget integration"
+msgstr ""
+
+#. Description of the plugin
+#: zenchef-widget-integration.php
+msgid "Easily integrates Zenchef widget into all pages of the site."
+msgstr ""
+
+#. Author of the plugin
+#: zenchef-widget-integration.php
+msgid "Zenchef"
+msgstr ""
+
+#. Author URI of the plugin
+#: zenchef-widget-integration.php
+msgid "https://zenchef.com"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:23
+msgctxt "widget.backoffice.settings_page.title"
+msgid "Zenchef widget settings"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:24
+msgctxt "widget.backoffice.settings_page.menu_label"
+msgid "Zenchef widget"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:37
+msgctxt "widget.backoffice.settings_page.widget_parameters_section_title"
+msgid "Widget parameters"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:40
+msgctxt "widget.backoffice.settings_page.restaurant_input_label"
+msgid "Restaurant ID"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:43
+msgctxt "widget.backoffice.settings_page.restaurant_input_description"
+msgid "ID of your Zenchef restaurant. You can find this ID in the Zenchef dashboard."
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:51
+msgctxt "widget.backoffice.settings_page.open_input_label"
+msgid "Open delay (in ms)"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:54
+msgctxt "widget.backoffice.settings_page.open_input_description"
+msgid "The delay in milliseconds before the widget opens automatically."
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:58
+msgctxt "widget.backoffice.settings_page.widget_position_input_label"
+msgid "Widget position"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:61
+msgctxt "widget.backoffice.settings_page.widget_position_input_description"
+msgid "Select the position of the widget on the page."
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:63
+msgctxt "widget.backoffice.settings_page.widget_position.center_option_label"
+msgid "Center"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:64
+msgctxt "widget.backoffice.settings_page.widget_position.left_option_label"
+msgid "Left"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:65
+msgctxt "widget.backoffice.settings_page.widget_position.right_option_label"
+msgid "Right"
+msgstr ""

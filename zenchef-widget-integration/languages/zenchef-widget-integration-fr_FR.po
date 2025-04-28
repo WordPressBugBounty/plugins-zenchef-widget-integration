@@ -1,0 +1,100 @@
+# Copyright (C) 2024 Zenchef
+# This file is distributed under the GPL2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Zenchef widget integration 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zenchef-widget-integration\n"
+"POT-Creation-Date: 2024-03-20T16:05:24+00:00\n"
+"PO-Revision-Date: 2024-03-21 10:25+0100\n"
+"Last-Translator: Zenchef <tech@zenchef.com>\n"
+"Language-Team: Zenchef <tech@zenchef.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Domain: zenchef-widget-integration\n"
+
+#. Plugin Name of the plugin
+#: zenchef-widget-integration.php
+msgid "Zenchef widget integration"
+msgstr "Intégration du widget de Zenchef"
+
+#. Description of the plugin
+#: zenchef-widget-integration.php
+msgid "Easily integrates Zenchef widget into all pages of the site."
+msgstr ""
+"Intégrer facilement le widget de Zenchef dans toutes les pages du site."
+
+#. Author of the plugin
+#: zenchef-widget-integration.php
+msgid "Zenchef"
+msgstr "Zenchef"
+
+#. Author URI of the plugin
+#: zenchef-widget-integration.php
+msgid "https://zenchef.com"
+msgstr "https://zenchef.com"
+
+#: src/Widget/Backoffice/add_settings_page.php:23
+msgctxt "widget.backoffice.settings_page.title"
+msgid "Zenchef widget settings"
+msgstr "Configuration du widget de Zenchef"
+
+#: src/Widget/Backoffice/add_settings_page.php:24
+msgctxt "widget.backoffice.settings_page.menu_label"
+msgid "Zenchef widget"
+msgstr "Widget de Zenchef"
+
+#: src/Widget/Backoffice/add_settings_page.php:37
+msgctxt "widget.backoffice.settings_page.widget_parameters_section_title"
+msgid "Widget parameters"
+msgstr "Paramètres du widget"
+
+#: src/Widget/Backoffice/add_settings_page.php:40
+msgctxt "widget.backoffice.settings_page.restaurant_input_label"
+msgid "Restaurant ID"
+msgstr "ID du restaurant"
+
+#: src/Widget/Backoffice/add_settings_page.php:43
+msgctxt "widget.backoffice.settings_page.restaurant_input_description"
+msgid ""
+"ID of your Zenchef restaurant. You can find this ID in the Zenchef dashboard."
+msgstr ""
+"ID de votre restaurant Zenchef. Vous trouverez cet identifiant dans le "
+"tableau de bord Zenchef."
+
+#: src/Widget/Backoffice/add_settings_page.php:51
+msgctxt "widget.backoffice.settings_page.open_input_label"
+msgid "Open delay (in ms)"
+msgstr "Délai avant l’ouverture (en millisecondes)"
+
+#: src/Widget/Backoffice/add_settings_page.php:54
+msgctxt "widget.backoffice.settings_page.open_input_description"
+msgid "The delay in milliseconds before the widget opens automatically."
+msgstr "Délai en millisecondes avant que le widget ne s’ouvre automatiquement."
+
+#: src/Widget/Backoffice/add_settings_page.php:58
+msgctxt "widget.backoffice.settings_page.widget_position_input_label"
+msgid "Widget position"
+msgstr "Position du widget"
+
+#: src/Widget/Backoffice/add_settings_page.php:61
+msgctxt "widget.backoffice.settings_page.widget_position_input_description"
+msgid "Select the position of the widget on the page."
+msgstr "Sélectionnez la position du widget dans la page."
+
+#: src/Widget/Backoffice/add_settings_page.php:63
+msgctxt "widget.backoffice.settings_page.widget_position.center_option_label"
+msgid "Center"
+msgstr "Au milieu"
+
+#: src/Widget/Backoffice/add_settings_page.php:64
+msgctxt "widget.backoffice.settings_page.widget_position.left_option_label"
+msgid "Left"
+msgstr "À gauche"
+
+#: src/Widget/Backoffice/add_settings_page.php:65
+msgctxt "widget.backoffice.settings_page.widget_position.right_option_label"
+msgid "Right"
+msgstr "À droite"
