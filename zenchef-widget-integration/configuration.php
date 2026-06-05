@@ -8,3 +8,5 @@ const SETTINGS_OPTION_NAME = 'zenchef_widget_parameters';
 const SETTINGS_GROUP_SLUG = 'zenchef.widget.settings_group';
 
 const ROOT_PATH = __DIR__ . '/';
+
+const PLUGIN_VERSION = '1.2.0';

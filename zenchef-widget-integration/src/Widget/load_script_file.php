@@ -5,6 +5,7 @@ namespace Zenchef\Widget\Widget;
 use function get_option;
 use function plugins_url;
 use function wp_enqueue_script;
+use const Zenchef\Widget\PLUGIN_VERSION;
 use const Zenchef\Widget\SETTINGS_OPTION_NAME;
 
 /**
@@ -26,7 +27,7 @@ function load_script_file()
         'zenchef-widget-integration',
         plugins_url('../../js/main.js', __FILE__),
         [],
-        '1.0.0',
+        PLUGIN_VERSION,
         true
     );
 }

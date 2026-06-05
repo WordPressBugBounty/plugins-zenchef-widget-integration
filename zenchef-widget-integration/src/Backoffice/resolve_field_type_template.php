@@ -8,6 +8,8 @@ const TYPE_TEMPLATE = [
     'text' => 'backoffice/form/text_input',
     'number' => 'backoffice/form/number_input',
     'select' => 'backoffice/form/select_input',
+    'checkbox' => 'backoffice/form/checkbox_input',
+    'color' => 'backoffice/form/color_input',
 ];
 
 /**

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Zenchef widget integration
  * Description: Easily integrates Zenchef widget into all pages of the site.
- * Version: 1.0.1
+ * Version: 1.2.0
  * Author: Zenchef
  * Author URI: https://zenchef.com
  * License: GPL2
