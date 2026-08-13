@@ -6,11 +6,8 @@ use function add_shortcode;
 use function is_array;
 use function ob_get_clean;
 use function ob_start;
-use function plugins_url;
 use function shortcode_atts;
-use function wp_enqueue_script;
 use function Zenchef\Widget\View\render;
-use const Zenchef\Widget\PLUGIN_VERSION;
 
 /**
  * @return void
@@ -66,6 +63,10 @@ function render_widget_shortcode($atts)
         return '';
     }
 
+    if (!widget_should_load()) {
+        return '';
+    }
+
     $settings = [
         'restaurant_id'     => $restaurant_id,
         'language'          => sanitize_language($atts['language']),
@@ -80,13 +81,7 @@ function render_widget_shortcode($atts)
     ];
 
     widget_shortcode_was_rendered(true);
-    wp_enqueue_script(
-        'zenchef-widget-integration',
-        plugins_url('../../js/main.js', __FILE__),
-        [],
-        PLUGIN_VERSION,
-        true
-    );
+    enqueue_widget_sdk();
 
     ob_start();
     render('main', [

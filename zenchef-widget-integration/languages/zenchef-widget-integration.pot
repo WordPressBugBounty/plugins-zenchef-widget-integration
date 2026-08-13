@@ -1,17 +1,17 @@
-# Copyright (C) 2024 Zenchef
+# Copyright (C) 2026 Zenchef
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zenchef widget integration 1.0\n"
+"Project-Id-Version: Zenchef widget integration 1.3.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zenchef-widget-integration\n"
-"Last-Translator: Zenchef <tech@zenchef.com>\n"
-"Language-Team: Zenchef <tech@zenchef.com>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-03-20T16:05:24+00:00\n"
+"POT-Creation-Date: 2026-08-13T07:18:45+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.10.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zenchef-widget-integration\n"
 
 #. Plugin Name of the plugin
@@ -34,62 +34,282 @@ msgstr ""
 msgid "https://zenchef.com"
 msgstr ""
 
-#: src/Widget/Backoffice/add_settings_page.php:23
+#: src/Widget/Backoffice/add_settings_page.php:24
+#: views/backoffice/settings_page.php:3
 msgctxt "widget.backoffice.settings_page.title"
 msgid "Zenchef widget settings"
 msgstr ""
 
-#: src/Widget/Backoffice/add_settings_page.php:24
+#: src/Widget/Backoffice/add_settings_page.php:25
 msgctxt "widget.backoffice.settings_page.menu_label"
 msgid "Zenchef widget"
 msgstr ""
 
-#: src/Widget/Backoffice/add_settings_page.php:37
-msgctxt "widget.backoffice.settings_page.widget_parameters_section_title"
-msgid "Widget parameters"
+#: src/Widget/Backoffice/add_settings_page.php:80
+msgctxt "widget.backoffice.settings_page.restaurant_section_title"
+msgid "Restaurant"
 msgstr ""
 
-#: src/Widget/Backoffice/add_settings_page.php:40
+#: src/Widget/Backoffice/add_settings_page.php:83
 msgctxt "widget.backoffice.settings_page.restaurant_input_label"
 msgid "Restaurant ID"
 msgstr ""
 
-#: src/Widget/Backoffice/add_settings_page.php:43
+#: src/Widget/Backoffice/add_settings_page.php:86
 msgctxt "widget.backoffice.settings_page.restaurant_input_description"
 msgid "ID of your Zenchef restaurant. You can find this ID in the Zenchef dashboard."
 msgstr ""
 
-#: src/Widget/Backoffice/add_settings_page.php:51
-msgctxt "widget.backoffice.settings_page.open_input_label"
-msgid "Open delay (in ms)"
+#: src/Widget/Backoffice/add_settings_page.php:94
+msgctxt "widget.backoffice.settings_page.language_input_label"
+msgid "Language"
 msgstr ""
 
-#: src/Widget/Backoffice/add_settings_page.php:54
-msgctxt "widget.backoffice.settings_page.open_input_description"
-msgid "The delay in milliseconds before the widget opens automatically."
+#: src/Widget/Backoffice/add_settings_page.php:97
+msgctxt "widget.backoffice.settings_page.language_input_description"
+msgid "Force a language for the booking widget. Leave on \"Use Zenchef OS default\" to follow the restaurant's configured language."
 msgstr ""
 
-#: src/Widget/Backoffice/add_settings_page.php:58
+#: src/Widget/Backoffice/add_settings_page.php:103
+msgctxt "widget.backoffice.settings_page.language.default_option_label"
+msgid "Use Zenchef OS default"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:117
+msgctxt "widget.backoffice.settings_page.appearance_section_title"
+msgid "Appearance"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:120
+msgctxt "widget.backoffice.settings_page.use_default_color_input_label"
+msgid "Brand colour"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:123
+msgctxt "widget.backoffice.settings_page.use_default_color_checkbox_label"
+msgid "Use the brand colour set in Zenchef OS"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:124
+msgctxt "widget.backoffice.settings_page.use_default_color_input_description"
+msgid "When unchecked, the colour selected below overrides the colour set in your Zenchef OS dashboard."
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:132
+msgctxt "widget.backoffice.settings_page.primary_color_input_label"
+msgid "Custom colour"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:135
+msgctxt "widget.backoffice.settings_page.primary_color_input_description"
+msgid "Hex colour used for the booking widget's primary buttons and accents (only applied when \"Use the brand colour set in Zenchef OS\" is unchecked)."
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:143
 msgctxt "widget.backoffice.settings_page.widget_position_input_label"
 msgid "Widget position"
 msgstr ""
 
-#: src/Widget/Backoffice/add_settings_page.php:61
+#: src/Widget/Backoffice/add_settings_page.php:146
 msgctxt "widget.backoffice.settings_page.widget_position_input_description"
 msgid "Select the position of the widget on the page."
 msgstr ""
 
-#: src/Widget/Backoffice/add_settings_page.php:63
+#: src/Widget/Backoffice/add_settings_page.php:148
 msgctxt "widget.backoffice.settings_page.widget_position.center_option_label"
 msgid "Center"
 msgstr ""
 
-#: src/Widget/Backoffice/add_settings_page.php:64
+#: src/Widget/Backoffice/add_settings_page.php:149
 msgctxt "widget.backoffice.settings_page.widget_position.left_option_label"
 msgid "Left"
 msgstr ""
 
-#: src/Widget/Backoffice/add_settings_page.php:65
+#: src/Widget/Backoffice/add_settings_page.php:150
 msgctxt "widget.backoffice.settings_page.widget_position.right_option_label"
 msgid "Right"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:157
+msgctxt "widget.backoffice.settings_page.behaviour_section_title"
+msgid "Behaviour"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:160
+msgctxt "widget.backoffice.settings_page.auto_open_input_label"
+msgid "Auto-open"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:163
+msgctxt "widget.backoffice.settings_page.auto_open_checkbox_label"
+msgid "Open the booking widget automatically when the page loads"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:164
+msgctxt "widget.backoffice.settings_page.auto_open_input_description"
+msgid "When disabled, the widget only opens when the visitor clicks the floating button or any element that triggers it (e.g. a button with data-zc-action=\"open\")."
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:172
+msgctxt "widget.backoffice.settings_page.open_input_label"
+msgid "Open delay (in ms)"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:175
+msgctxt "widget.backoffice.settings_page.open_input_description"
+msgid "The delay in milliseconds before the widget opens automatically. Only applies when auto-open is enabled."
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:179
+msgctxt "widget.backoffice.settings_page.hide_button_input_label"
+msgid "Floating button"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:182
+msgctxt "widget.backoffice.settings_page.hide_button_checkbox_label"
+msgid "Hide the default floating booking button"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:183
+msgctxt "widget.backoffice.settings_page.hide_button_input_description"
+msgid "Useful when you trigger the widget from your own buttons (e.g. an Elementor button with data-zc-action=\"open\") and don't want the default floating button."
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:193
+msgctxt "widget.backoffice.settings_page.analytics_section_title"
+msgid "Analytics"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:196
+msgctxt "widget.backoffice.settings_page.disable_gtm_input_label"
+msgid "Google Tag Manager"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:199
+msgctxt "widget.backoffice.settings_page.disable_gtm_checkbox_label"
+msgid "Disable the widget's GTM integration"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:200
+msgctxt "widget.backoffice.settings_page.disable_gtm_input_description"
+msgid "Enable this if your site already tracks bookings through its own GTM container and you want to avoid duplicate events."
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:208
+msgctxt "widget.backoffice.settings_page.disable_ga4_input_label"
+msgid "Google Analytics 4"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:211
+msgctxt "widget.backoffice.settings_page.disable_ga4_checkbox_label"
+msgid "Disable the widget's GA4 integration"
+msgstr ""
+
+#: src/Widget/Backoffice/add_settings_page.php:212
+msgctxt "widget.backoffice.settings_page.disable_ga4_input_description"
+msgid "Enable this if your site already sends booking events to GA4 and you want to avoid duplicate events."
+msgstr ""
+
+#: src/Widget/Backoffice/register_settings.php:56
+msgctxt "widget.backoffice.settings_page.invalid_restaurant_id_error"
+msgid "Invalid restaurant ID. Please copy the ID exactly as it appears in your Zenchef dashboard."
+msgstr ""
+
+#: views/backoffice/settings_page.php:11
+msgctxt "widget.backoffice.settings_page.shortcode_section_title"
+msgid "Per-page shortcode"
+msgstr ""
+
+#: views/backoffice/settings_page.php:13
+msgctxt "widget.backoffice.settings_page.shortcode_intro"
+msgid "Drop the shortcode into any post or page to render the widget inline. Without attributes, it uses the settings above:"
+msgstr ""
+
+#: views/backoffice/settings_page.php:17
+msgctxt "widget.backoffice.settings_page.shortcode_overrides_intro"
+msgid "Every setting above can be overridden per-page. Useful for sites managing several restaurants or for landing pages with custom styling:"
+msgstr ""
+
+#: views/backoffice/settings_page.php:21
+msgctxt "widget.backoffice.settings_page.shortcode_attributes_title"
+msgid "Available attributes"
+msgstr ""
+
+#: views/backoffice/settings_page.php:25
+msgctxt "widget.backoffice.settings_page.shortcode_table.attribute_header"
+msgid "Attribute"
+msgstr ""
+
+#: views/backoffice/settings_page.php:26
+msgctxt "widget.backoffice.settings_page.shortcode_table.values_header"
+msgid "Accepted values"
+msgstr ""
+
+#: views/backoffice/settings_page.php:30
+msgctxt "widget.backoffice.settings_page.shortcode_table.restaurant_id"
+msgid "Your Zenchef restaurant ID. Falls back to the value set above."
+msgstr ""
+
+#: views/backoffice/settings_page.php:32
+msgctxt "widget.backoffice.settings_page.shortcode_table.primary_color_prefix"
+msgid "Hex colour, e.g."
+msgstr ""
+
+#: views/backoffice/settings_page.php:32
+msgctxt "widget.backoffice.settings_page.shortcode_table.primary_color_condition"
+msgid "only applied when"
+msgstr ""
+
+#: views/backoffice/settings_page.php:33
+msgctxt "widget.backoffice.settings_page.shortcode_table.use_default_color_on"
+msgid "use Zenchef OS colour"
+msgstr ""
+
+#: views/backoffice/settings_page.php:33
+#: views/backoffice/settings_page.php:35
+#: views/backoffice/settings_page.php:37
+#: views/backoffice/settings_page.php:38
+#: views/backoffice/settings_page.php:39
+msgctxt "widget.backoffice.settings_page.shortcode_table.or"
+msgid "or"
+msgstr ""
+
+#: views/backoffice/settings_page.php:33
+msgctxt "widget.backoffice.settings_page.shortcode_table.use_default_color_off"
+msgid "use the primary_color above"
+msgstr ""
+
+#: views/backoffice/settings_page.php:35
+msgctxt "widget.backoffice.settings_page.shortcode_table.auto_open_on"
+msgid "open automatically"
+msgstr ""
+
+#: views/backoffice/settings_page.php:35
+msgctxt "widget.backoffice.settings_page.shortcode_table.auto_open_off"
+msgid "only on click"
+msgstr ""
+
+#: views/backoffice/settings_page.php:36
+msgctxt "widget.backoffice.settings_page.shortcode_table.open_delay"
+msgid "Delay in milliseconds before auto-opening. Only applies when"
+msgstr ""
+
+#: views/backoffice/settings_page.php:37
+msgctxt "widget.backoffice.settings_page.shortcode_table.hide_button_on"
+msgid "hide the floating button"
+msgstr ""
+
+#: views/backoffice/settings_page.php:43
+msgctxt "widget.backoffice.settings_page.custom_button_title"
+msgid "Triggering the widget from a custom button"
+msgstr ""
+
+#: views/backoffice/settings_page.php:45
+msgctxt "widget.backoffice.settings_page.custom_button_intro"
+msgid "The widget can be opened from any clickable element on the page (Elementor button, Gutenberg button, custom HTML, etc.) using one of the three SDK-native methods:"
+msgstr ""
+
+#: views/backoffice/settings_page.php:54
+msgctxt "widget.backoffice.settings_page.shortcode_gutenberg_tip"
+msgid "Tip: in the Gutenberg block editor, insert the shortcode in a \"Shortcode\" block (Add Block / Shortcode) rather than a Paragraph block, so that quote characters are not auto-formatted."
 msgstr ""

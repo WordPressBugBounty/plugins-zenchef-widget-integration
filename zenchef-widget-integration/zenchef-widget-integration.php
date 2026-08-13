@@ -2,12 +2,13 @@
 /**
  * Plugin Name: Zenchef widget integration
  * Description: Easily integrates Zenchef widget into all pages of the site.
- * Version: 1.2.0
+ * Version: 1.3.0
+ * Requires at least: 4.6
+ * Requires PHP: 7.4
  * Author: Zenchef
  * Author URI: https://zenchef.com
  * License: GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * PHP Version: 5.6
  * Text Domain: zenchef-widget-integration
  * Domain Path: /languages
  */

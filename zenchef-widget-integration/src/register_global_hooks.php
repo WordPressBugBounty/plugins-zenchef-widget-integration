@@ -3,6 +3,7 @@
 namespace Zenchef\Widget\Widget;
 
 use function add_action;
+use function add_filter;
 use function Zenchef\Widget\Widget\load_script_file;
 use function Zenchef\Widget\Widget\load_script_template_file;
 use function Zenchef\Widget\Widget\register_widget_shortcode;
@@ -20,12 +21,18 @@ function register_global_hooks()
     require_once ROOT_PATH . 'src/Widget/build_widget_data_attributes.php';
     require_once ROOT_PATH . 'src/Widget/load_translations.php';
     require_once ROOT_PATH . 'src/Widget/load_script_template_file.php';
+    require_once ROOT_PATH . 'src/Widget/enqueue_widget_sdk.php';
     require_once ROOT_PATH . 'src/Widget/load_script_file.php';
     require_once ROOT_PATH . 'src/Widget/register_shortcode.php';
+    require_once ROOT_PATH . 'src/Widget/register_consent_api.php';
 
     add_action('init', 'Zenchef\Widget\Widget\load_translations');
     add_action('wp_footer', 'Zenchef\Widget\Widget\load_script_template_file');
     add_action('wp_enqueue_scripts', 'Zenchef\Widget\Widget\load_script_file');
+    add_filter('script_loader_tag', 'Zenchef\Widget\Widget\filter_widget_sdk_script_tag', 10, 3);
+    add_filter('wp_resource_hints', 'Zenchef\Widget\Widget\filter_widget_sdk_resource_hints', 10, 2);
+
+    register_consent_api();
 
     register_widget_shortcode();
 }

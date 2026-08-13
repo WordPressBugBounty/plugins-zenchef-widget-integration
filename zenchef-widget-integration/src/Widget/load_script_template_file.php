@@ -13,6 +13,12 @@ function load_script_template_file()
         return '';
     }
 
+    // Without this the configuration element would still be emitted when the SDK
+    // has been suppressed, leaving dead markup on the page.
+    if (!widget_should_load()) {
+        return '';
+    }
+
     $settings = get_widget_settings();
 
     return render(

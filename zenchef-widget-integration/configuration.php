@@ -9,4 +9,7 @@ const SETTINGS_GROUP_SLUG = 'zenchef.widget.settings_group';
 
 const ROOT_PATH = __DIR__ . '/';
 
-const PLUGIN_VERSION = '1.2.0';
+/** Absolute path to the plugin bootstrap file, for APIs keyed on the plugin basename. */
+const PLUGIN_FILE = __DIR__ . '/zenchef-widget-integration.php';
+
+const PLUGIN_VERSION = '1.3.0';
