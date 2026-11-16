@@ -2,6 +2,11 @@
 
 namespace Zenchef\Widget\Widget\Backoffice;
 
+// Prevent unsecure access to this file.
+if (!defined('WPINC')) {
+    die;
+}
+
 use function wp_add_inline_script;
 use function wp_enqueue_script;
 use function wp_enqueue_style;

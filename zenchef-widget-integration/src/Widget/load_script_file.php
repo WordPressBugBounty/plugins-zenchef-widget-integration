@@ -2,6 +2,11 @@
 
 namespace Zenchef\Widget\Widget;
 
+// Prevent unsecure access to this file.
+if (!defined('WPINC')) {
+    die;
+}
+
 /**
  * @return void
  */

@@ -2,6 +2,11 @@
 
 namespace Zenchef\Widget\Widget;
 
+// Prevent unsecure access to this file.
+if (!defined('WPINC')) {
+    die;
+}
+
 /**
  * Builds the map of data-* attributes to emit on the .zc-widget-config element,
  * given the plugin's settings array. Attributes for optional features are only

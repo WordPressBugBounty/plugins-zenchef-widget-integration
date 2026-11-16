@@ -2,6 +2,11 @@
 
 namespace Zenchef\Widget\Widget;
 
+// Prevent unsecure access to this file.
+if (!defined('WPINC')) {
+    die;
+}
+
 use function add_shortcode;
 use function is_array;
 use function ob_get_clean;
@@ -59,7 +64,12 @@ function render_widget_shortcode($atts)
     );
 
     $restaurant_id = sanitize_restaurant_id($atts['restaurant_id']);
-    if ($restaurant_id === null || $restaurant_id === '') {
+    if ($restaurant_id === null) {
+        // Otherwise the footer injects the global restaurant on a page meant for another one.
+        widget_shortcode_was_rendered(true);
+        return '';
+    }
+    if ($restaurant_id === '') {
         return '';
     }
 

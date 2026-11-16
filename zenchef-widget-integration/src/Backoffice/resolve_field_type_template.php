@@ -2,6 +2,11 @@
 
 namespace Zenchef\Widget\Backoffice;
 
+// Prevent unsecure access to this file.
+if (!defined('WPINC')) {
+    die;
+}
+
 use function array_key_exists;
 
 const TYPE_TEMPLATE = [

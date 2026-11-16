@@ -3,7 +3,7 @@ Contributors: zenchef
 Tags: reservation, restaurant, food
 Requires at least: 4.6
 Tested up to: 7.1
-Stable tag: 1.3.0
+Stable tag: 1.5.0
 Requires PHP: 7.4
 License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -15,11 +15,13 @@ This plugin allows you to integrate your restaurant's Zenchef reservation widget
 This plugin allows you to integrate your restaurant's Zenchef reservation widget directly on all pages of your website, allowing your customers to take reservations directly without having to switch page.
 You can also customize the integration according to your needs.
 
+The widget is set up with your restaurant's public ID, which starts with `rpid_` (for example `rpid_AB12CD34`). Restaurants that set the plugin up with a numeric restaurant ID can keep it for now, but should switch to the public ID: the settings page shows a reminder until they do.
+
 == Installation ==
 
 1. Upload the plugin to your WordPress plugins directory, or install the plugin through your website dashboard, under _Plugins / Add new_ page.
 2. Activate the plugin through your website dashboard, under _Plugins_.
-3. Set your restaurant's ID on the new settings page that have been added to your dashboard, under _Settings / Zenchef widget_.
+3. Set your restaurant's public ID (it starts with `rpid_`) on the new settings page that have been added to your dashboard, under _Settings / Zenchef widget_.
 
 == Usage ==
 
@@ -35,11 +37,11 @@ You can also place the widget inline on a specific page or post using the `[zenc
 
 You can override any of the settings per-page (useful for sites managing several restaurants):
 
-`[zenchef_widget restaurant_id="367219" open_delay="0" position="center"]`
+`[zenchef_widget restaurant_id="rpid_AB12CD34" open_delay="0" position="center"]`
 
 All of the settings from the admin page can be overridden as shortcode attributes:
 
-`[zenchef_widget restaurant_id="367219" language="fr" primary_color="#cc0000" hide_button="1" auto_open="0" disable_gtm="1" disable_ga4="1"]`
+`[zenchef_widget restaurant_id="rpid_AB12CD34" language="fr" primary_color="#cc0000" hide_button="1" auto_open="0" disable_gtm="1" disable_ga4="1"]`
 
 When the shortcode is used on a page, the floating global widget is not also injected, so there is never a duplicate.
 
@@ -47,9 +49,17 @@ When the shortcode is used on a page, the floating global widget is not also inj
 
 == Frequently Asked Questions ==
 
-= Where can I find my restaurant's ID? =
+= Where do I find my restaurant ID? =
 
-Your restaurant's ID is the number displayed on the top of your [Zenchef dashboard](https://app.zenchef.com/).
+Use your restaurant's public ID: `rpid_` followed by 8 capital letters and digits, for example `rpid_AB12CD34`. In your [Zenchef dashboard](https://app.zenchef.com/), go to _Settings > Widget > Embed_: it is the `data-restaurant` value of the integration code. Copy it exactly as shown, in capital letters.
+
+= I set the plugin up with a numeric restaurant ID. Do I need to change it? =
+
+It keeps working for now, but please replace it with your public ID (see above). Numeric IDs will eventually stop being accepted by the booking widget. Until you switch, the plugin's settings page shows a reminder.
+
+= Can I have two booking-widget plugins active at once? =
+
+No. Each booking-widget plugin adds its own widget configuration to the page, so with two of them active a visitor can get a duplicated widget or the wrong restaurant — the plugins cannot see each other's configuration. If you are switching from another one of our widget plugins, deactivate it before activating this one.
 
 = How can I open the booking widget from a custom button (Elementor, Gutenberg, Divi...)? =
 
@@ -67,9 +77,9 @@ As long as the plugin is active and a restaurant ID is set, you can trigger the 
 
 3. **Call the JavaScript API** from your own scripts:
 
-   `ZenchefWidget.open()` — opens the widget
-   `ZenchefWidget.close()` — closes it
-   `ZenchefWidget.toggle()` — toggles it
+   `ZcWidget.open()` — opens the widget
+   `ZcWidget.close()` — closes it
+   `ZcWidget.toggle()` — toggles it
 
 == Support ==
 
@@ -81,6 +91,18 @@ For plugin support, please visit the [support center](https://help.zenchef.com/h
 2. The Zenchef widget settings page.
 
 == Changelog ==
+
+= 1.5.0 =
+
+* The restaurant ID setting now asks for your restaurant's public ID, which starts with `rpid_` and is shown in your Zenchef dashboard under _Settings > Widget > Embed_.
+* Numeric restaurant IDs keep working for now. The settings page shows a reminder inviting you to switch to your public ID.
+* Public IDs are now checked for their exact format: `rpid_` followed by 8 capital letters and digits. A public ID typed in lowercase is rejected with an explicit message instead of being saved and loading a widget that cannot find the restaurant. The `[zenchef_widget]` shortcode applies the same check.
+
+= 1.4.0 =
+
+* The settings page is now fully translated into French, Dutch, German and Spanish, and those translations ship inside the plugin. Sites set to a regional variant of these languages, such as Belgian French, Swiss German or Mexican Spanish, get the closest one rather than English.
+* Fixed: the plugin's bundled French translation never loaded, because WordPress was pointed at a languages directory that does not exist. French sites only saw the strings translated on translate.wordpress.org.
+* For French, Dutch, German and Spanish, the bundled translations now take precedence over translate.wordpress.org, where these languages covered only a handful of the settings-page strings. Every other language is still served from translate.wordpress.org as before.
 
 = 1.3.0 =
 

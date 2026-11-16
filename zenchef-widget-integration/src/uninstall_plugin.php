@@ -2,6 +2,11 @@
 
 namespace Zenchef\Widget;
 
+// Prevent unsecure access to this file.
+if (!defined('WPINC')) {
+    die;
+}
+
 use function Zenchef\Widget\Widget\Backoffice\remove_settings;
 
 /**

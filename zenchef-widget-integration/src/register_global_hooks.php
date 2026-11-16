@@ -2,6 +2,11 @@
 
 namespace Zenchef\Widget\Widget;
 
+// Prevent unsecure access to this file.
+if (!defined('WPINC')) {
+    die;
+}
+
 use function add_action;
 use function add_filter;
 use function Zenchef\Widget\Widget\load_script_file;

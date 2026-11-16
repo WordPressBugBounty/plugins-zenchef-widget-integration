@@ -2,6 +2,11 @@
 
 namespace Zenchef\Widget\View;
 
+// Prevent unsecure access to this file.
+if (!defined('WPINC')) {
+    die;
+}
+
 use function extract;
 use const Zenchef\Widget\ROOT_PATH;
 

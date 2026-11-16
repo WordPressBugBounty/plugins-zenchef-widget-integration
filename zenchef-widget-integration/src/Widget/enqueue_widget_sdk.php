@@ -2,6 +2,11 @@
 
 namespace Zenchef\Widget\Widget;
 
+// Prevent unsecure access to this file.
+if (!defined('WPINC')) {
+    die;
+}
+
 use function apply_filters;
 use function array_values;
 use function esc_attr;
@@ -51,9 +56,11 @@ function enqueue_widget_sdk()
 
     // No version is appended: a ?ver= query string on a third-party URL is
     // meaningless for cache busting and defeats exact-URL script blockers.
+    // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- the null above is deliberate; see the comment.
     wp_enqueue_script(SDK_SCRIPT_HANDLE, SDK_SCRIPT_URL, [], null, true);
 
     // A dependency-only alias, so it costs no extra request.
+    // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- alias with no src of its own; a version would describe nothing.
     wp_register_script(LEGACY_SCRIPT_HANDLE, false, [SDK_SCRIPT_HANDLE], null, true);
 
     return true;

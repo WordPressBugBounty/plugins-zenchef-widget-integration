@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Zenchef widget integration
  * Description: Easily integrates Zenchef widget into all pages of the site.
- * Version: 1.3.0
+ * Version: 1.5.0
  * Requires at least: 4.6
  * Requires PHP: 7.4
  * Author: Zenchef

@@ -2,11 +2,18 @@
 
 namespace Zenchef\Widget\Widget\Backoffice;
 
+// Prevent unsecure access to this file.
+if (!defined('WPINC')) {
+    die;
+}
+
 use function _x;
+use function add_action;
 use function add_options_page;
 use function add_settings_field;
 use function add_settings_section;
 use function array_merge;
+use function esc_html;
 use function Zenchef\Widget\Backoffice\resolve_field_type_template;
 use function Zenchef\Widget\View\render;
 use function Zenchef\Widget\Widget\get_widget_settings;
@@ -20,7 +27,7 @@ function add_settings_page()
 {
     $page_slug = 'zenchef.widget.settings_page';
 
-    add_options_page(
+    $hook_suffix = add_options_page(
         _x('Zenchef widget settings', 'widget.backoffice.settings_page.title', 'zenchef-widget-integration'),
         _x('Zenchef widget', 'widget.backoffice.settings_page.menu_label', 'zenchef-widget-integration'),
         'manage_options',
@@ -33,6 +40,12 @@ function add_settings_page()
         }
     );
 
+    if ($hook_suffix) {
+        add_action('load-' . $hook_suffix, static function () {
+            add_action('admin_notices', __NAMESPACE__ . '\\render_numeric_restaurant_id_notice');
+        });
+    }
+
     $sections = build_settings_sections();
     $current_settings_values = get_widget_settings();
 
@@ -40,7 +53,7 @@ function add_settings_page()
 
         add_settings_section(
             $section_id,
-            $section['title'],
+            esc_html($section['title']),
             static function () {},
             $page_slug
         );
@@ -59,7 +72,7 @@ function add_settings_page()
 
             add_settings_field(
                 $id,
-                $field['label'],
+                esc_html($field['label']),
                 static function () use ($template, $template_parameters) {
                     return render($template, $template_parameters);
                 },
@@ -84,7 +97,7 @@ function build_settings_sections()
                     'type' => 'text',
                     'template_parameters' => [
                         'description' => _x(
-                            'ID of your Zenchef restaurant. You can find this ID in the Zenchef dashboard.',
+                            'Public ID of your Zenchef restaurant, starting with "rpid_" (for example rpid_AB12CD34). You will find it in your Zenchef dashboard, under Settings > Widget > Embed. A numeric restaurant ID still works for now.',
                             'widget.backoffice.settings_page.restaurant_input_description',
                             'zenchef-widget-integration'
                         ),

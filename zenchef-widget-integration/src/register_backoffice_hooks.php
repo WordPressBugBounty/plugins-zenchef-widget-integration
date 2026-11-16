@@ -2,6 +2,11 @@
 
 namespace Zenchef\Widget\Widget\Backoffice;
 
+// Prevent unsecure access to this file.
+if (!defined('WPINC')) {
+    die;
+}
+
 use function add_action;
 use function Zenchef\Widget\Widget\Backoffice\add_settings_page;
 use function Zenchef\Widget\Widget\Backoffice\load_settings_page_assets;
